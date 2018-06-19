@@ -1,0 +1,336 @@
+
+/*******************************************************
+ *    Auther:
+ *    Date:
+********************************************************/
+
+
+* {
+    /*To make div width same (by adding padding and border in div total width) */
+    box-sizing: border-box;
+}
+
+body {
+    margin:0;
+}
+
+header {
+    height: 56px;
+    text-align: center;
+    line-height: 56px;
+    font-size: 25px;
+    background: #009688;
+    -webkit-box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.5);
+    box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.5);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 9999;
+    color: white;
+}
+
+.card_delete {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: white;
+    color: #F44336;
+    z-index: 1;
+}
+
+.main {
+    height:100%;
+    margin-top: calc(15px + 56px );
+    margin-bottom: 50px;
+}
+
+.listview {
+    list-style-type: none;
+    margin:0;
+    padding:0;
+}
+
+.listview > li {
+    margin: 20px 10px;
+    position:relative;
+}
+
+.list_pic {
+    height:100%;
+    text-align: center;
+}
+
+
+.list_content {
+    padding-left:15px;
+    border-bottom: 0.4px solid #9a9a9a94;
+    padding-bottom: 20px;
+    padding-right: 25px;
+}
+
+img {
+    width: 100%;
+    height:auto;
+}
+
+.item_content {
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.fab {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-width: 0px;
+    background: #009688;
+    color: white;
+    font-size: 2em;
+    z-index: 100;
+    -webkit-box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.5);
+    box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.5);
+}
+
+.search_box {
+    width: 100%;
+    border: 1px solid #FF5722;
+    line-height: 40px;
+    height: 40px;
+    border-radius: 20px;
+    padding-right: 40px;
+    padding-left: 15px;
+    font-size: 20px;
+}
+
+.search_button {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    line-height: 40px;
+    color: #009688;
+    background: transparent;
+    border: none;
+}
+
+.nav-btn-left {
+    position: absolute;
+    left: 10px;
+    height: 56px;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    display:none;
+    color: white;
+}
+
+.nav-btn-right {
+        position: absolute;
+    right: 10px;
+    height: 56px;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    color: white;
+}
+
+form {
+    max-width:500px;
+    margin: auto;
+}
+.round_empty_btn {
+    width: 50%;
+    height: 40px;
+    background: transparent;
+    border: 1px solid #009688;
+    border-radius: 20px;
+}
+form input, form Textarea {
+    width: 100%;
+    padding: 10px;
+    line-height: 1.5em;
+    font-size: 1.5em;
+    border: none;
+    border-bottom: 2px solid #009688;
+    
+}
+
+form .row {
+    margin : 0 20px;
+}
+
+form label {
+    font-size: 1.2em;
+    
+}
+.formgroup {
+    margin-bottom:20px;
+}
+
+select {
+    width: 90%;
+    border: none;
+    border-bottom: 2px solid #009688;
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+
+/* Modal */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4); 
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/*************************************
+ * Responsive UI CSS handling
+ * 
+ *************************************/
+ 
+.row::after, main:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+ 
+/*Mobile First*/
+[class*="col-"] {
+    float: left;
+    width: 100%;
+}
+
+/* Mobile*/
+@media (min-width: 320px) {
+    .col-s1 {width: 8.33%;}
+    .col-s2 {width: 16.66%;}
+    .col-s3 {width: 25%;}
+    .col-s4 {width: 33.33%;}
+    .col-s5 {width: 41.66%;}
+    .col-s6 {width: 50%;}
+    .col-s7 {width: 58.33%;}
+    .col-s8 {width: 66.66%;}
+    .col-s9 {width: 75%;}
+    .col-s10 {width: 83.33%;}
+    .col-s11 {width: 91.66%;}
+    .col-s12 {width: 100%;}
+}
+
+/* Larger Mobile screens */
+@media (min-width: 550px) {
+    .col-sm1 {width: 8.33%;}
+    .col-sm2 {width: 16.66%;}
+    .col-sm3 {width: 25%;}
+    .col-sm4 {width: 33.33%;}
+    .col-sm5 {width: 41.66%;}
+    .col-sm6 {width: 50%;}
+    .col-sm7 {width: 58.33%;}
+    .col-sm8 {width: 66.66%;}
+    .col-sm9 {width: 75%;}
+    .col-sm10 {width: 83.33%;}
+    .col-sm11 {width: 91.66%;}
+    .col-sm12 {width: 100%;}
+    
+
+    
+    .listview > li {
+        width: 46%;
+        float: left;
+        padding-top:10px;
+        -webkit-box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.2);
+        box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.2);
+    }
+    
+    .list_content {
+        border-bottom: none;
+    }
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+    .col-m1 {width: 8.33%;}
+    .col-m2 {width: 16.66%;}
+    .col-m3 {width: 25%;}
+    .col-m4 {width: 33.33%;}
+    .col-m5 {width: 41.66%;}
+    .col-m6 {width: 50%;}
+    .col-m7 {width: 58.33%;}
+    .col-m8 {width: 66.66%;}
+    .col-m9 {width: 75%;}
+    .col-m10 {width: 83.33%;}
+    .col-m11 {width: 91.66%;}
+    .col-m12 {width: 100%;}
+    
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+    .col-l1 {width: 8.33%;}
+    .col-l2 {width: 16.66%;}
+    .col-l3 {width: 25%;}
+    .col-l4 {width: 33.33%;}
+    .col-l5 {width: 41.66%;}
+    .col-l6 {width: 50%;}
+    .col-l7 {width: 58.33%;}
+    .col-l8 {width: 66.66%;}
+    .col-l9 {width: 75%;}
+    .col-l10 {width: 83.33%;}
+    .col-l11 {width: 91.66%;}
+    .col-l12 {width: 100%;}
+    img {
+        height: auto;
+    }
+    
+    .listview > li {
+        width: 31%;
+        float: left;
+    }
+}
+

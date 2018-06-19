@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    
+    <head>
+        <!-- making webpage responsive 
+            1) width=device-width : setting width page same as device screen width
+            2) initial-scale=1.0 : initial zoom level when page is loaded by browser.
+        -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Demo Website !</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css" type="text/css" />
+    </head>
+    
+    <body>
+        <header>
+            <button onclick="app.home.show();" class="nav-btn-left" id="home_btn"><i class="material-icons">home</i></button>
+            Demo Application
+            <button onclick="utils.toggleSearch(event)" class="nav-btn-right" id="search_btn" ><i class="material-icons">search</i></button>
+            <div class="row" id="search_box" style="margin:0 15px;display:none;" >
+                <div class="col-s12" style="position: relative;">
+                    <input type="text" onKeyUp="app.home.searchIn(event)" class="search_box">
+                    <button class="search_button" ><i class="material-icons" style="line-height: 40px;">search</i></button>
+                </div>
+            </div>
+        </header>
+        
+        <div class="main" id="app">
+            
+        </div>
+        
+        <div id="modal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <input type="hidden" id="action"/>
+            <p id="modal_msg"></p>
+          </div>
+        </div>
+        
+        
+        <div id="show_quote" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="list_pic">
+                <img id="modal_img" src=""/>
+            </div>
+            
+            
+            <div class="row">
+                <div class="col-s12">
+                    <strong id="quote_name"></strong>
+                </div>
+                <div class="col-s12">
+                    <small><i id="quote_birthday"></i></small>
+                </div>
+                <div class="col-s12">
+                    <small id="modal_quote" ></small>
+                </div>
+                <div class="col-s12" style="text-align: center;margin-top: 20px;">
+                    <button class="round_empty_btn" id="quote_modal_close"> Close</button>
+                </div>
+            </div>
+          </div>
+        </div>
+        
+        <script type="text/javascript" src="js/script.js"></script>
+    </body>
+</html>
